@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-
+import profile from "../../../public/profileimg.png";
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -16,11 +16,7 @@ const Navbar = () => {
           <span>1</span>
         </div>
         <div className="user">
-          <img
-            src="https://images.pexels.com/photos/3585095/pexels-photo-3585095.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt=""
-            className="icon"
-          />
+          <img src={profile} alt="" className="icon" />
           <span>Harun</span>
         </div>
         <img src="/settings.svg" alt="" className="icon" />
