@@ -238,16 +238,16 @@ export const chartBoxConversion = {
 };
 
 export const barChartBoxRevenue = {
-  title: "Kâr",
+  title: "Kar",
   color: "#8884d8",
-  dataKey: "profit",
+  dataKey: "kar",
   chartData: [
     {
       name: "Pzt",
       kar: 4000,
     },
     {
-      name: "Mon",
+      name: "Sal",
       kar: 3000,
     },
     {
@@ -267,7 +267,7 @@ export const barChartBoxRevenue = {
       kar: 2390,
     },
     {
-      name: "Pzr",
+      name: "Paz",
       kar: 3490,
     },
   ],
@@ -276,7 +276,7 @@ export const barChartBoxRevenue = {
 export const barChartBoxVisit = {
   title: "Toplam Ziyaret",
   color: "#FF8042",
-  dataKey: "visit",
+  dataKey: "ziyaret",
   chartData: [
     {
       name: "Pzt",
@@ -303,7 +303,7 @@ export const barChartBoxVisit = {
       ziyaret: 2390,
     },
     {
-      name: "Pzr",
+      name: "Paz",
       ziyaret: 3490,
     },
   ],
@@ -573,12 +573,12 @@ export const singleUser = {
     ],
     data: [
       {
-        name: "Sun",
+        name: "Pzt",
         visits: 4000,
         clicks: 2400,
       },
       {
-        name: "Mon",
+        name: "Sal",
         visits: 3000,
         clicks: 1398,
       },
@@ -654,12 +654,12 @@ export const singleProduct = {
     ],
     data: [
       {
-        name: "Sun",
+        name: "Pzt",
         visits: 4000,
         orders: 2400,
       },
       {
-        name: "Mon",
+        name: "Sal",
         visits: 3000,
         orders: 1398,
       },

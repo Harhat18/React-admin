@@ -1,5 +1,5 @@
 import "./Navbar.scss";
-import profile from "../../../public/profileimg.png";
+import profile from "/public/profileimg.png";
 const Navbar = () => {
   return (
     <div className="navbar">
