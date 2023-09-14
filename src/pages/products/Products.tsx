@@ -1,43 +1,42 @@
-import { GridColDef } from "@mui/x-data-grid";
-import DataTable from "../../components/dataTable/DataTable";
-import "./Users.scss";
 import { useState } from "react";
+import "./Products.scss";
+import DataTable from "../../components/dataTable/DataTable";
 import Add from "../../components/add/Add";
-import { userRows } from "../../data";
-// import { useQuery } from "@tanstack/react-query";
+import { GridColDef } from "@mui/x-data-grid";
+import { products } from "../../data";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "No", width: 90 },
   {
     field: "img",
-    headerName: "Resm",
+    headerName: "Image",
     width: 100,
     renderCell: (params) => {
       return <img src={params.row.img || "/noavatar.png"} alt="" />;
     },
   },
   {
-    field: "firstName",
+    field: "title",
     type: "string",
-    headerName: "Adı",
+    headerName: "Başlık",
+    width: 250,
+  },
+  {
+    field: "color",
+    type: "string",
+    headerName: "Renk",
     width: 150,
   },
   {
-    field: "lastName",
+    field: "price",
     type: "string",
-    headerName: "Soyadı",
-    width: 150,
-  },
-  {
-    field: "email",
-    type: "string",
-    headerName: "Email",
+    headerName: "Ücret",
     width: 200,
   },
   {
-    field: "phone",
+    field: "producer",
+    headerName: "Üretici",
     type: "string",
-    headerName: "Telefon",
     width: 200,
   },
   {
@@ -47,43 +46,43 @@ const columns: GridColDef[] = [
     type: "string",
   },
   {
-    field: "verified",
-    headerName: "Onay",
+    field: "inStock",
+    headerName: "Stok",
     width: 150,
     type: "boolean",
   },
 ];
 
-const Users = () => {
+const Products = () => {
   const [open, setOpen] = useState(false);
 
   // TEST THE API
 
   // const { isLoading, data } = useQuery({
-  //   queryKey: ["allusers"],
+  //   queryKey: ["allproducts"],
   //   queryFn: () =>
-  //     fetch("http://localhost:8800/api/users").then(
+  //     fetch("http://localhost:8800/api/products").then(
   //       (res) => res.json()
   //     ),
   // });
 
   return (
-    <div className="users">
+    <div className="products">
       <div className="info">
-        <h1>Kullanıcılar</h1>
-        <button onClick={() => setOpen(true)}>Yeni Kullanıcı Ekle</button>
+        <h1>Ürünler</h1>
+        <button onClick={() => setOpen(true)}>Yeni Ürün Ekle</button>
       </div>
-      <DataTable slug="users" columns={columns} rows={userRows} />
+      <DataTable slug="products" columns={columns} rows={products} />
       {/* TEST THE API */}
 
       {/* {isLoading ? (
         "Loading..."
       ) : (
-        <DataTable slug="users" columns={columns} rows={data} />
+        <DataTable slug="products" columns={columns} rows={data} />
       )} */}
-      {open && <Add slug="user" columns={columns} setOpen={setOpen} />}
+      {open && <Add slug="product" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };
 
-export default Users;
+export default Products;

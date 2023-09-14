@@ -1,5 +1,5 @@
-import "./Navbar.scss";
-import profile from "/public/profileimg.png";
+import "./navbar.scss";
+
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -11,12 +11,12 @@ const Navbar = () => {
         <img src="/search.svg" alt="" className="icon" />
         <img src="/app.svg" alt="" className="icon" />
         <img src="/expand.svg" alt="" className="icon" />
-        <div className="notifications">
-          <img src="/notifications.svg" alt="" className="icon" />
+        <div className="notification">
+          <img src="/notifications.svg" alt="" />
           <span>1</span>
         </div>
         <div className="user">
-          <img src={profile} alt="" className="icon" />
+          <img src="/public/profileimg.png" alt="" />
           <span>Harun</span>
         </div>
         <img src="/settings.svg" alt="" className="icon" />

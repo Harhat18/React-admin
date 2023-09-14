@@ -1,10 +1,10 @@
-import "./Footer.scss";
+import "./footer.scss";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <span>HarhatDev</span>
-      <span>©HarhatDev Yönetim Paneli</span>
+      <span>HarHatDev</span>
+      <span>© HarHatDev Yönetim Paneli</span>
     </div>
   );
 };

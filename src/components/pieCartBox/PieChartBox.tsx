@@ -2,16 +2,16 @@ import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import "./pieChartBox.scss";
 
 const data = [
-  { name: "Telefon", value: 500, color: "#0088FE" },
-  { name: "Masaüstü", value: 200, color: "#00C49F" },
+  { name: "Telefon", value: 400, color: "#0088FE" },
+  { name: "Masaüstü", value: 300, color: "#00C49F" },
+  { name: "Laptop", value: 300, color: "#FFBB28" },
   { name: "Tablet", value: 200, color: "#FF8042" },
-  { name: "Laptop", value: 400, color: "#FFBB28" },
 ];
 
 const PieChartBox = () => {
   return (
     <div className="pieChartBox">
-      <h1>Potansiyel Müşteri Verileri</h1>
+      <h1>Ürün Satış Tahminleri</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height={300}>
           <PieChart>
